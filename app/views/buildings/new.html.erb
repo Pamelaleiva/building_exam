@@ -1,0 +1,13 @@
+<h1>Creando un nuevo Edificio</h1>
+<%= form_for(@building, :url => buildings_path, :method => "post") do |f| %>
+<%= f.label :nombre_edificio %>
+<%= f.text_field :nombre_edificio %>
+<br>
+<%= f.label :direccion %>
+<%= f.text_field :direccion %>
+<br>
+<%= f.label :ciudad %>
+<%= f.text_field :ciudad %>
+<%= f.submit "Crear Edificio" %>
+<% end %>
+ 

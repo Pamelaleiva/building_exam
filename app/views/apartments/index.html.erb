@@ -1,0 +1,30 @@
+<h1>Listado Departamentos</h1>
+<table>
+<tr>
+    <th>numero depto</th>
+    <th>edificio</th>
+    <th>acciones</th>
+</tr>
+<tr>
+<%@apartments.each do |ap|%>
+<td>
+<%=ap.numero_depto%>
+</td>
+<td>
+<%=ap.building_id%>
+</td>
+
+<td>
+<button><%= link_to "ver", ap%></button>
+<button><%= link_to "editar", edit_apartment_path(ap)%></button>
+<button><%= link_to "borrar", delete_apartment_path(ap)%></button>
+</td>
+</tr>
+<% end %>
+</table>
+<%= link_to "crear un nuevo departamento", new_apartment_path%>
+
+
+
+
+

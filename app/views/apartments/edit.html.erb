@@ -1,0 +1,13 @@
+<h1>Editando Departamentos</h1>
+<%=form_for @apartment do |f| %>
+<%=f.label :numero_depto%>
+<%=f.text_field :numero_depto%>
+<%=f.label :building_id%>
+<%=f.text_field :building_id%>
+<%=f.submit "Editando información"%>
+<br>
+
+
+<% end %>
+
+<button><%= link_to "volver", :back %></button>
