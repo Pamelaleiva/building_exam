@@ -1,4 +1,5 @@
 class BuildingsController < ApplicationController
+  layout "admin"
   def index
     @buildings = Building.all
   end

@@ -1,17 +1,9 @@
 <br>
 <h1>Creando un nuevo Edificio</h1>
 <%= form_for(@building, :url => buildings_path, :method => "post") do |f| %>
-<%= f.label :nombre_edificio %>
-<%= f.text_field :nombre_edificio %>
-<br>
-<%= f.label :direccion %>
-<%= f.text_field :direccion %>
-<br>
-<%= f.label :ciudad %>
-<%= f.text_field :ciudad %>
-<br>
+<%= render(:partial => "form", :locals => {:f => f})%>
 <br>
 <button><%= f.submit "Crear Edificio" %></button>
 <% end %>
 <br>
- <button><%= link_to "Volver", :back %></button>
+ <button><%= link_to "Volver a listado edificios", :back %></button>

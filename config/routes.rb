@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "public#index"
   resources :buildings do 
     member do 
     get :delete
